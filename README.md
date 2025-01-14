@@ -26,7 +26,7 @@ These datasets covered trips from **Q1 2019** and **Q1 2020**, and by analyzing 
 ## Data Preprocessing
 The data preprocessing involved cleaning, transforming, and merging the two datasets to prepare for analysis. Below is a summary of the key steps:
 
-1. Data Collection
+### 1. Data Collection
 Data from Divvy trips for **Q1 2019** and **Q1 2020** were loaded into RStudio using the **read_csv()** function.
 
 ```r
@@ -34,7 +34,7 @@ Data from Divvy trips for **Q1 2019** and **Q1 2020** were loaded into RStudio u
 q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv")
 q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv")
 ```
-2. Data Wrangling and Merging
+### 2. Data Wrangling and Merging
 The columns in the 2019 dataset were renamed to make them consistent with the 2020 dataset. The two datasets were then combined using **bind_rows()** function into one data frame, all_trips. The columns: start_lat, birthyear, and gender, were removed as they were no longer valid beginning 2020.
 ```r
 # Rename columns  to make them consistent with q1_2020
@@ -55,7 +55,7 @@ all_trips <- bind_rows(q1_2019, q1_2020)
 all_trips <- all_trips %>%  
   select(-c(start_lat, start_lng, end_lat, end_lng, birthyear, gender,  "tripduration"))
 ```
-3. Data Cleaning and Transformation
+### 3. Data Cleaning and Transformation
 The following actions were perfomed with regards to data cleaning and transformation:
 
   - The member_casual column was standardized by replacing the older labels as follows: the two names for members - "member" and "subscriber", and the two names     for casual riders -       "customer" and "casual" were replaced by "member" and "casual" respectively.
