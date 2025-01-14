@@ -6,7 +6,7 @@
 Welcome to the Cyclistic Bike-Share Analysis Case Study! In this case study, the task is to explore historical bike trip data to understand how casual riders and annual members use Cyclistic bikes differently. The company aims to increase the number of annual memberships, as they are more profitable than casual rides. The marketing team seeks to identify trends and behaviors that can inform a strategy to convert casual riders—who currently use single-ride or full-day passes—into annual members. This analysis will uncover key insights into rider behavior and provide data-backed recommendations to shape future marketing campaigns, ultimately answering the question: **How do annual members and casual riders use Cyclistic bikes differently?**
 
 ## Data Description
-The dataset used in this analysis includes historical bike trip records from Cyclistic’s bike-share program, specifically from [Divvy 2019 Q1](Datasets/Divvy_Trips_2019_Q1.csv) and [Divvy 2020 Q1](Datasets/Divvy_Trips_2020_Q1.csv), which were combined into a single dataset for analysis. The combined dataset contains a total of 791,956 rows, representing bike trips from both time periods. It captures detailed information on bike rentals, allowing us to compare the behavior of annual members and casual riders. Note that while column names differ slightly between the two datasets, they refer to the same concepts. Below are the key columns in the dataset, separated into **raw data** and **calculated columns**:
+The dataset used in this analysis includes historical bike trip records from Cyclistic’s bike-share program, specifically from [Divvy 2019 Q1](Datasets/Divvy_Trips_2019_Q1.csv) and [Divvy 2020 Q1](Datasets/Divvy_Trips_2020_Q1.csv), which were combined into a single dataset for analysis. The combined dataset contains a total of 791,956 rows, representing bike trips from both time periods. It captures detailed information on bike rentals, allowing the comparison in the behavior of annual members and casual riders. Note that while column names differed slightly between the two datasets, they refered to the same concepts. Below were the key columns in the dataset, separated into **raw data** and **calculated columns**:
 
 ### Raw Data Columns:
 - ride_id (or trip_id): A unique identifier for each bike trip.
@@ -21,9 +21,74 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 - ride_length: The total duration of the trip in seconds.
 - day_of_week: The day of the week the trip occurred.
 
-These datasets cover trips from **Q1 2019** and **Q1 2020**, and by analyzing the trip details, we can identify usage patterns that differentiate casual riders and annual members.
+These datasets covered trips from **Q1 2019** and **Q1 2020**, and by analyzing the trip details, we can identified usage patterns that differentiated casual riders and annual members.
 
 ## Data Preprocessing
+The data preprocessing involved cleaning, transforming, and merging the two datasets to prepare for analysis. Below is a summary of the key steps:
+
+1. Data Collection
+Data from Divvy trips for **Q1 2019** and **Q1 2020** were loaded into RStudio using the **read_csv()** function.
+
+```r
+# Uploaded Divvy datasets (csv files) here
+q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv")
+q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv")
+```
+2. Data Wrangling and Merging
+The columns in the 2019 dataset were renamed to make them consistent with the 2020 dataset. The two datasets were then combined using **bind_rows()** function into one data frame, all_trips. The columns: start_lat, birthyear, and gender, were removed as they were no longer valid beginning 2020.
+```r
+# Rename columns  to make them consistent with q1_2020
+q1_2019 <- rename(q1_2019
+                   ,ride_id = trip_id
+                   ,rideable_type = bikeid
+                   ,started_at = start_time
+                   ,ended_at = end_time
+                   ,start_station_name = from_station_name
+                   ,start_station_id = from_station_id
+                   ,end_station_name = to_station_name
+                   ,end_station_id = to_station_id
+                   ,member_casual = usertype
+                   )
+# Stack individual quarter's data frames into one big data frame
+all_trips <- bind_rows(q1_2019, q1_2020)
+# Remove lat, long, birthyear, and gender columns
+all_trips <- all_trips %>%  
+  select(-c(start_lat, start_lng, end_lat, end_lng, birthyear, gender,  "tripduration"))
+```
+3. Data Cleaning and Transformation
+The following actions were perfomed with regards to data cleaning and transformation:
+
+  - The member_casual column was standardized by replacing the older labels as follows: the two names for members - "member" and "subscriber", and the two names     for casual riders -       "customer" and "casual" were replaced by "member" and "casual" respectively.
+    ```r
+    all_trips <-  all_trips %>% 
+    mutate(member_casual = recode(member_casual
+                                ,"Subscriber" = "member"
+                                ,"Customer" = "casual"))
+    ```
+  - Additional columns for date, month, day, year, and day_of_week were added to facilitate aggregation.
+    ```r
+    all_trips$date <- as.Date(all_trips$started_at) #The default format is yyyy-mm-dd
+    all_trips$month <- format(as.Date(all_trips$date), "%m")
+    all_trips$day <- format(as.Date(all_trips$date), "%d")
+    all_trips$year <- format(as.Date(all_trips$date), "%Y")
+    all_trips$day_of_week <- format(as.Date(all_trips$date), "%A")
+    ```
+  - A ride_length column, calculated by subtracting started_at from ended_at, was added to the **all_trips** data frame since the Q1 2020 data did not have the tripduration column. The       new column was then converted to a numeric format for analysis.
+    ```r
+    # "ride_length" in seconds
+    all_trips$ride_length <- difftime(all_trips$ended_at,all_trips$started_at)
+    # Converted "ride_length" from Factor to numeric so we could run calculations on the data
+    is.factor(all_trips$ride_length)
+    all_trips$ride_length <- as.numeric(as.character(all_trips$ride_length))
+    is.numeric(all_trips$ride_length)
+    ```
+  - Deleted all rows with negative tripduration for quality control. This were the rides where the bikes were out of circulation for numerous reasons.
+    ```r
+    # A new version of the data frame, all_trips_v2, was created since data was being removed.
+    all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length<0),]
+    ```
+    
+After cleaning, the final dataset (all_trips_v2) was ready for analysis, with consistent column names, correct data types, and no invalid entries. This dataset included key variables like ride_length, member_casual, and day_of_week.
 
 ## Exploratory Data Analysis (EDA)
 
