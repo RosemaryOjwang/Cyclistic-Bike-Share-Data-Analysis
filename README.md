@@ -17,7 +17,7 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 - end_station_name (or to_station_name): The name of the station where the trip ended.
 - member_casual (or user_type): Indicates whether the rider is a casual rider or an annual member.
 
-  ### Calculated Columns:
+### Calculated Columns:
 - ride_length: The total duration of the trip in seconds.
 - day_of_week: The day of the week the trip occurred.
 
