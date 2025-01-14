@@ -143,12 +143,15 @@ By performing EDA, we not only cleaned and summarized the data but also uncovere
 
 ## Top Three Recommendations
 1. Target market campaigns.
+   
    Focus on casual riders who frequently use the bikes. Tailor promotions highlighting the benefits of membership, such as cost saving for frequent riders.
    
-3. Introduction of incentives for membership.
+2. Introduction of incentives for membership.
+   
    Offer discounts or limited time promotions for casual riders with usage (e.g. ride duration above a certain threshold). Also, highlight features like free or discounted rides for     
    members to convert casual users.
    
-5. Education on membership benefits.
+3. Education on membership benefits.
+   
    Emphasize the cost-effectivenes of annual membership compared to casua  lusage, especially for longer rides.
 
