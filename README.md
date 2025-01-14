@@ -123,9 +123,11 @@ This grouping showed trends such as higher ridership across all the days of the 
 We created 2 key visualizations:
 
 Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
+
 ![numberOfRidesBy_riderType](Visualizations/numberOfRidesBy_riderType.png)
 
 Average Ride Duration by Day of Week: A similar bar plot that compared the average ride duration between members and casual riders for each day.
+
 ![average_duration](Visualizations/average_duration.png)
 
 Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
