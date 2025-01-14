@@ -1,14 +1,11 @@
 # Cyclistic-Bike-Share-Data-Analysis
-
-
-
 ## Introduction
 Welcome to the Cyclistic Bike-Share Analysis Case Study! In this case study, the task is to explore historical bike trip data to understand how casual riders and annual members use Cyclistic bikes differently. The company aims to increase the number of annual memberships, as they are more profitable than casual rides. The marketing team seeks to identify trends and behaviors that can inform a strategy to convert casual riders—who currently use single-ride or full-day passes—into annual members. This analysis will uncover key insights into rider behavior and provide data-backed recommendations to shape future marketing campaigns, ultimately answering the question: **How do annual members and casual riders use Cyclistic bikes differently?**
 
 ## Data Description
 The dataset used in this analysis includes historical bike trip records from Cyclistic’s bike-share program, specifically from [Divvy 2019 Q1](Datasets/Divvy_Trips_2019_Q1.csv) and [Divvy 2020 Q1](Datasets/Divvy_Trips_2020_Q1.csv), which were combined into a single dataset for analysis. The combined dataset contains a total of 791,956 rows, representing bike trips from both time periods. It captures detailed information on bike rentals, allowing the comparison in the behavior of annual members and casual riders. Note that while column names differed slightly between the two datasets, they refered to the same concepts. Below were the key columns in the dataset, separated into **raw data** and **calculated columns**:
 
-### Raw Data Columns:
+#### Raw Data Columns:
 - ride_id (or trip_id): A unique identifier for each bike trip.
 - rideable_type (or bike_type): The type of bike used for the trip (e.g., traditional bike, reclining bike, cargo bike, hand tricycle).
 - start_time (or started_at): The timestamp for when the trip began.
@@ -17,7 +14,7 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 - end_station_name (or to_station_name): The name of the station where the trip ended.
 - member_casual (or user_type): Indicates whether the rider is a casual rider or an annual member.
 
-### Calculated Columns:
+#### Calculated Columns:
 - ride_length: The total duration of the trip in seconds.
 - day_of_week: The day of the week the trip occurred.
 
@@ -26,7 +23,7 @@ These datasets covered trips from **Q1 2019** and **Q1 2020**, and by analyzing 
 ## Data Preprocessing
 The data preprocessing involved cleaning, transforming, and merging the two datasets to prepare for analysis. Below is a summary of the key steps:
 
-### 1. Data Collection
+#### 1. Data Collection
 Data from Divvy trips for **Q1 2019** and **Q1 2020** were loaded into RStudio using the **read_csv()** function.
 
 ```r
@@ -34,7 +31,7 @@ Data from Divvy trips for **Q1 2019** and **Q1 2020** were loaded into RStudio u
 q1_2019 <- read_csv("Divvy_Trips_2019_Q1.csv")
 q1_2020 <- read_csv("Divvy_Trips_2020_Q1.csv")
 ```
-### 2. Data Wrangling and Merging
+#### 2. Data Wrangling and Merging
 The columns in the 2019 dataset were renamed to make them consistent with the 2020 dataset. The two datasets were then combined using **bind_rows()** function into one data frame, all_trips. The columns: start_lat, birthyear, and gender, were removed as they were no longer valid beginning 2020.
 ```r
 # Rename columns  to make them consistent with q1_2020
@@ -55,7 +52,7 @@ all_trips <- bind_rows(q1_2019, q1_2020)
 all_trips <- all_trips %>%  
   select(-c(start_lat, start_lng, end_lat, end_lng, birthyear, gender,  "tripduration"))
 ```
-### 3. Data Cleaning and Transformation
+#### 3. Data Cleaning and Transformation
 The following actions were perfomed with regards to data cleaning and transformation:
 
   - The member_casual column was standardized by replacing the older labels as follows: the two names for members - "member" and "subscriber", and the two names     for casual riders -       "customer" and "casual" were replaced by "member" and "casual" respectively.
@@ -105,7 +102,7 @@ To begin the EDA, we first examined basic summary statistics of the ride_length 
 The summary statistics showed that ride lengths varied significantly, with some extreme outliers., which were expected due to quality control checks and erroneous data entries.
 
 2. Grouped Analysis: Member vs Casual Riders
-We further analyzed the ride length by user type—members versus casual riders. By aggregating the ride_length based on the member_casual column, we could comparec the mean, median, and extremes for each group. This helped identify differences in ride behavior between regular members and casual users.
+We further analyzed the ride length by user type — members versus casual riders. By aggregating the ride_length based on the member_casual column, we could comparec the mean, median, and extremes for each group. This helped identify differences in ride behavior between regular members and casual users.
 
 - Mean ride_length: casual 5372.7839
                       member 795.2523
@@ -115,14 +112,14 @@ We further analyzed the ride length by user type—members versus casual riders.
                    member 6096428
 - Min ride_length: casual 2
                    member 1
-We observed that casual tend to take longer rides on average, while members have shorter, more sporadic trips. However, the dataset contains a few outliers with extreme ride lengths. These outliers suggest that some rides may not be representative of typical user behavior and should likely be filtered out for analysis.
+We observed that casual tend to take longer rides, while members have shorter rides. However, the dataset contains a few outliers with extreme ride lengths. These outliers suggest that some rides may not be representative of typical user behavior and should likely be filtered out for analysis.
 
 3. Time-Based Analysis
-Next, we explored how ride patterns varied by time, focusing on ride lengths and frequency by day of the week. We aggregated the data by day of the week and visualized the results to see if certain days were more popular or if ride durations differed by day.
+Next, we explored how ride patterns varied, focusing on ride lengths and frequency by day of the week. We aggregated the data by day of the week and visualized the results to see if certain days were more popular or if ride durations differed by day.
 
 This grouping showed trends such as higher ridership across all the days of the week for casual riders and relatively lower rideship for members across all days of the week.
 
-4. Visualizations
+4. Supporting Visualizations
 We created 2 key visualizations:
 
 Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
@@ -133,8 +130,8 @@ Average Ride Duration by Day of Week: A similar bar plot that compared the avera
 
 Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
 
-5. Key Insights
-From the EDA, we gleaned several important insights:
+5. Key Findings
+The following are the key findings made from the data:
 
 Members tend to take shorter trips and ride more, whereas casual riders have longer, more frequent rides.
 Ride lengths show some outliers, especially due to data issues like negative values, which were removed during preprocessing.
