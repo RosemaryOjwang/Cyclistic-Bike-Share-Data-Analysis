@@ -91,6 +91,56 @@ The following actions were perfomed with regards to data cleaning and transforma
 After cleaning, the final dataset (all_trips_v2) was ready for analysis, with consistent column names, correct data types, and no invalid entries. This dataset included key variables like ride_length, member_casual, and day_of_week.
 
 ## Exploratory Data Analysis (EDA)
+The purpose of this step was to better understand the structure, patterns, and relationships within the dataset. We used various summary statistics, visualizations, and groupings to identify key trends and insights. Below is an overview of the methods and results from the Exploratory Data Analysis (EDA).
+
+1. Summary Statistics
+To begin the EDA, we first examined basic summary statistics of the ride_length variable, which is crucial for understanding ride durations. The following statistics were calculated:
+
+- Mean Ride Length: 1189.459 seconds (The average ride duration across all trips).
+- Median Ride Length: 539 seconds (The middle value in the sorted list of ride 
+  durations).
+- Maximum and Minimum Ride Length: 10632022 and 1 seconds respectively (The       
+  longest and shortest rides recorded).
+
+The summary statistics showed that ride lengths varied significantly, with some extreme outliers., which were expected due to quality control checks and erroneous data entries.
+
+2. Grouped Analysis: Member vs Casual Riders
+We further analyzed the ride length by user type—members versus casual riders. By aggregating the ride_length based on the member_casual column, we could comparec the mean, median, and extremes for each group. This helped identify differences in ride behavior between regular members and casual users.
+
+- Mean ride_length: casual 5372.7839
+                      member 795.2523
+- Median ride_length: casual 1393
+                      member 508
+- Max ride_length: casual 10632022
+                   member 6096428
+- Min ride_length: casual 2
+                   member 1
+We observed that casual tend to take longer rides on average, while members have shorter, more sporadic trips. However, the dataset contains a few outliers with extreme ride lengths. These outliers suggest that some rides may not be representative of typical user behavior and should likely be filtered out for analysis.
+
+3. Time-Based Analysis
+Next, we explored how ride patterns varied by time, focusing on ride lengths and frequency by day of the week. We aggregated the data by day of the week and visualized the results to see if certain days were more popular or if ride durations differed by day.
+
+This grouping showed trends such as higher ridership across all the days of the week for casual riders and relatively lower rideship for members across all days of the week.
+
+4. Visualizations
+We created 2 key visualizations:
+
+Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
+![numberOfRidesBy_riderType](Visualizations/numberOfRidesBy_riderType.png)
+
+Average Ride Duration by Day of Week: A similar bar plot that compared the average ride duration between members and casual riders for each day.
+![average_duration](Visualization/average_duration.png)
+
+Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
+
+5. Key Insights
+From the EDA, we gleaned several important insights:
+
+Members tend to take shorter trips and ride more, whereas casual riders have longer, more frequent rides.
+Ride lengths show some outliers, especially due to data issues like negative values, which were removed during preprocessing.
+These initial insights provided a solid foundation for further analysis, allowing us to focus on areas that could reveal deeper trends and correlations.
+
+By performing EDA, we not only cleaned and summarized the data but also uncovered patterns that will inform the subsequent steps in our analysis.
 
 ## Conclusion
 
