@@ -129,7 +129,7 @@ Number of Rides by Day of Week: A bar plot that displayed the number of rides ta
 ![numberOfRidesBy_riderType](Visualizations/numberOfRidesBy_riderType.png)
 
 Average Ride Duration by Day of Week: A similar bar plot that compared the average ride duration between members and casual riders for each day.
-![average_duration](Visualization/average_duration.png)
+![average_duration](Visualizations/average_duration.png)
 
 Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
 
