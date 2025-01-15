@@ -155,3 +155,7 @@ By performing EDA, we not only cleaned and summarized the data but also uncovere
    
    Emphasize the cost-effectivenes of annual membership compared to casua  lusage, especially for longer rides.
 
+## Presentation
+For a detailed presentation, please see the ..
+
+## How to Run the Code
