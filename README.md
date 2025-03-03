@@ -153,7 +153,7 @@ By performing EDA, we not only cleaned and summarized the data but also uncovere
    
 3. Education on membership benefits.
    
-   Emphasize the cost-effectivenes of annual membership compared to casua  lusage, especially for longer rides.
+   Emphasize the cost-effectivenes of annual membership compared to casual usage, especially for longer rides.
 
 ## Presentation
 For a detailed presentation, please see the [presentation](https://docs.google.com/presentation/d/1w4xdPxZvyavPg2ct1LWB8wuOGEEZJnSyNn3NWAEboTc/edit?usp=sharing)
