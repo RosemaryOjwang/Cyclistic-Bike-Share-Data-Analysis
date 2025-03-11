@@ -193,6 +193,10 @@ source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
 
 N/B: For any issues, check for missing dependencies or errors in the dataset format.
 
+## Technologies Used
+- Programming Language: R
+- Libraries/ Packages: tidyverse, dplyr, scales and conflicted.
+
 ## License
 [MIT](https://opensource.org/license/mit)
 
