@@ -193,6 +193,9 @@ source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
 
 N/B: For any issues, check for missing dependencies or errors in the dataset format.
 
+## License
+[MIT](https://opensource.org/license/mit)
+
 ## Contact/ Author
 - [My GitHub Profile](https://github.com/settings/profile)
 - [My LinkedIn Profile](www.linkedin.com/in/rosemary-ojwang-989b76259)
