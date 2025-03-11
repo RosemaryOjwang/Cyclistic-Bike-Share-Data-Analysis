@@ -193,6 +193,25 @@ source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
 
 N/B: For any issues, check for missing dependencies or errors in the dataset format.
 
+## Results & Visualizations
+Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
+
+![numberOfRidesBy_riderType](Visualizations/numberOfRidesBy_riderType.png)
+
+Average Ride Duration by Day of Week: A similar bar plot that compared the average ride duration between members and casual riders for each day.
+
+![average_duration](Visualizations/average_duration.png)
+
+Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
+
+#### The following are the key findings made from the data:
+
+Members tend to take shorter trips and ride more, whereas casual riders have longer, more frequent rides.
+Ride lengths show some outliers, especially due to data issues like negative values, which were removed during preprocessing.
+These initial insights provided a solid foundation for further analysis, allowing us to focus on areas that could reveal deeper trends and correlations.
+
+By performing EDA, we not only cleaned and summarized the data but also uncovered patterns that will inform the subsequent steps in our analysis.
+
 ## Technologies Used
 - Programming Language: R
 - Libraries/ Packages: tidyverse, dplyr, scales and conflicted.
