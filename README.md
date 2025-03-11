@@ -159,3 +159,37 @@ By performing EDA, we not only cleaned and summarized the data but also uncovere
 For a detailed presentation, please see the [presentation](https://docs.google.com/presentation/d/1w4xdPxZvyavPg2ct1LWB8wuOGEEZJnSyNn3NWAEboTc/edit?usp=sharing)
 
 ## How to Run the Code
+### Prerequisites
+Ensure you have the following installed:  
+- **R** (Download from [CRAN](https://cran.r-project.org/))  
+- **RStudio** (Optional but recommended)  
+- Required R packages (see below)
+
+### Installation
+1. Clone this repository to your local machine:  
+   ```
+   git clone https://[github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis](https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git)
+   ```
+   Navigate to the top level of the directory containing the cloned repository
+2. Open R or RStudio and install the required packages:
+  ```r
+  
+  install.packages(c("tidyverse", "ggplot2", "dplyr"))  # Add any other dependencies
+  ```
+### Running the Script
+Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) in RStudio or run it from the terminal.
+Execute the script using:
+```r
+source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
+```
+#### The script will:
+- Load and clean the dataset
+- Perform exploratory data analysis
+- Generate visualizations and summaries
+
+### Expected Output
+- Summary statistics printed in the console
+- Data visualizations saved in your current working directory.
+
+N/B: For any issues, check for missing dependencies or errors in the dataset format.
+
