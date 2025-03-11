@@ -158,6 +158,25 @@ By performing EDA, we not only cleaned and summarized the data but also uncovere
 ## Presentation
 For a detailed presentation, please see the [presentation](https://docs.google.com/presentation/d/1w4xdPxZvyavPg2ct1LWB8wuOGEEZJnSyNn3NWAEboTc/edit?usp=sharing)
 
+## Project Overview
+This Cyclistic Bike-Share Analysis explores historical bike trip data to understand how casual riders and annual members use the service differently. The goal is to identify trends and behaviors that can help the company increase annual memberships, which are more profitable than one-time rides. By analyzing ride patterns, trip durations, and usage trends, this study provides data-driven insights to support a marketing strategy aimed at converting casual riders into long-term subscribers.
+
+## Dataset
+The dataset used in this analysis includes historical bike trip records from Cyclistic’s bike-share program, specifically from [Divvy 2019 Q1](Datasets/Divvy_Trips_2019_Q1.csv) and [Divvy 2020 Q1](Datasets/Divvy_Trips_2020_Q1.csv), which were combined into a single dataset for analysis. The combined dataset contained a total of 791,956 rows, representing bike trips from both time periods. It captures detailed information on bike rentals, allowing the comparison in the behavior of annual members and casual riders. Note that while column names differed slightly between the two datasets, they refered to the same concepts. Below were the key columns in the dataset, separated into **raw data** and **calculated columns**:
+
+### Raw Data Columns:
+- ride_id (or trip_id): A unique identifier for each bike trip.
+- rideable_type (or bike_type): The type of bike used for the trip (e.g., traditional bike, reclining bike, cargo bike, hand tricycle).
+- start_time (or started_at): The timestamp for when the trip began.
+- end_time (or ended_at): The timestamp for when the trip ended.
+- start_station_name (or from_station_name): The name of the station where the trip started.
+- end_station_name (or to_station_name): The name of the station where the trip ended.
+- member_casual (or user_type): Indicates whether the rider is a casual rider or an annual member.
+
+### Calculated Columns:
+- ride_length: The total duration of the trip in seconds.
+- day_of_week: The day of the week the trip occurred.
+
 ## How to Run the Code
 ### Prerequisites
 Ensure you have the following installed:  
@@ -172,8 +191,7 @@ Ensure you have the following installed:
    ```
    Navigate to the top level of the directory containing the cloned repository
 2. Open R or RStudio and install the required packages:
-  ```r
-  
+  ```r  
   install.packages(c("tidyverse", "ggplot2", "dplyr"))  # Add any other dependencies
   ```
 ### Running the Script
@@ -201,23 +219,9 @@ N/B: For any issues, check for missing dependencies or errors in the dataset for
 5. Export summary file for further analysis.
 
 ## Results & Visualizations
-Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
+The analysis identified key differences between casual riders and annual members, helping shape data-driven marketing strategies.  
 
-![numberOfRidesBy_riderType](Visualizations/numberOfRidesBy_riderType.png)
-
-Average Ride Duration by Day of Week: A similar bar plot that compared the average ride duration between members and casual riders for each day.
-
-![average_duration](Visualizations/average_duration.png)
-
-Both visualizations helped highlight that casual riders tend to have longer trips than members. On the other hand, members tend to take more rides than casual riders.
-
-#### The following are the key findings made from the data:
-
-Members tend to take shorter trips and ride more, whereas casual riders have longer, more frequent rides.
-Ride lengths show some outliers, especially due to data issues like negative values, which were removed during preprocessing.
-These initial insights provided a solid foundation for further analysis, allowing us to focus on areas that could reveal deeper trends and correlations.
-
-By performing EDA, we not only cleaned and summarized the data but also uncovered patterns that will inform the subsequent steps in our analysis.
+**View the full presentation here:** [Cyclistic Analysis Presentation](https://docs.google.com/presentation/d/1w4xdPxZvyavPg2ct1LWB8wuOGEEZJnSyNn3NWAEboTc/edit?usp=sharing)  
 
 ## Technologies Used
 - Programming Language: R
