@@ -193,6 +193,13 @@ source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
 
 N/B: For any issues, check for missing dependencies or errors in the dataset format.
 
+## Analysis Steps
+1. Collect data.
+2. Wrangle data and combine into a single file.
+3. Clean up and add data to prepare for analysis.
+4. Conduct descriptive analysis.
+5. Export summary file for further analysis.
+
 ## Results & Visualizations
 Number of Rides by Day of Week: A bar plot that displayed the number of rides taken by both members and casual users on each day of the week.
 
