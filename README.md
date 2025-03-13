@@ -46,5 +46,5 @@ The analysis identified key differences between casual riders and annual members
 [MIT](https://opensource.org/license/mit)
 ## Contact/ Author
 - [My GitHub Profile](https://github.com/settings/profile)
-- [My LinkedIn Profile](www.linkedin.com/in/rosemary-ojwang-989b76259)
+- [My LinkedIn Profile](https://www.linkedin.com/in/rosemary-ojwang-989b76259/)
 
