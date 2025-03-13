@@ -1,9 +1,9 @@
 # Cyclistic-Bike-Share-Data-Analysis
 ## Project Overview
-This Cyclistic Bike-Share Analysis explores historical bike trip data to understand how casual riders and annual members use the service differently. The goal is to identify trends and behaviors that can help the company increase annual memberships, which are more profitable than one-time rides. By analyzing ride patterns, trip durations, and usage trends, this study provides data-driven insights to support a marketing strategy aimed at converting casual riders into long-term subscribers.
+This Cyclistic Bike-Share Analysis examines historical trip data to identify usage patterns between casual riders and annual members, aiming to provide data-driven insights that support a marketing strategy for increasing profitable long-term subscriptions.
 
 ## Dataset
-The dataset used in this analysis includes historical bike trip records from Cyclistic’s bike-share program, specifically from [Divvy 2019 Q1](Datasets/Divvy_Trips_2019_Q1.csv) and [Divvy 2020 Q1](Datasets/Divvy_Trips_2020_Q1.csv), which were combined into a single dataset for analysis. The combined dataset contained a total of 791,956 rows, representing bike trips from both time periods. It captures detailed information on bike rentals, allowing the comparison in the behavior of annual members and casual riders. Note that while column names differed slightly between the two datasets, they refered to the same concepts. Below were the key columns in the dataset, separated into **raw data** and **calculated columns**:
+The dataset for this analysis combines historical bike trip records from Cyclistic’s bike-share program: Divvy 2019 Q1 and Divvy 2020 Q1, totaling 791,956 trips. It details bike rentals, enabling a comparison between annual members and casual riders. Though column names varied slightly, they represented the same concepts. Below are the key columns, categorized as raw data and calculated columns:
 
 ### Raw Data Columns:
 - ride_id (or trip_id): A unique identifier for each bike trip.
@@ -26,25 +26,12 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 2. Access **RStudio cloud** (also called Posit Cloud) for sign up & Login [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
 3. Click **New Project**, then **New RStudio Project** to create a new project. You can give your project a name.
 4. On the bottom right side of the **Posit Cloud** page, click on **Files** > **Upload** > **Choose File** then navigate to the directory holding the cloned repository: https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git. Select **Cyclistic-Bike-Share-Data-Analysis-RScript.R** to upload it into posit cloud.
-
-
-   
-### Running the Script
-Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) in RStudio or run it from the terminal.
-Execute the script using:
-```r
-source("Cyclistic-Bike-Share-Data-Analysis-RScript.R")
-```
-#### The script will:
-- Load and clean the dataset
-- Perform exploratory data analysis
-- Generate visualizations and summaries
-
+5. Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) under **Files** in Posit Cloud.
+6. Execute the script by clicking on the **Run** button on the top right of the Posit cloud page.
+   **NB:**You can run the code in small batches to avoid errors as we are dealing with a large dataset.
 ### Expected Output
 - Summary statistics printed in the console
 - Data visualizations saved in your current working directory.
-
-N/B: For any issues, check for missing dependencies or errors in the dataset format.
 
 ## Analysis Steps
 1. Collect data.
