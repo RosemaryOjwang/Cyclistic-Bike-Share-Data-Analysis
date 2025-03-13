@@ -24,7 +24,8 @@ The dataset for this analysis combines historical bike trip records from Cyclist
 4. On the bottom right side of the **Posit Cloud** page, click on **Files** > **Upload** > **Choose File** then navigate to the directory holding the cloned repository: https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git. Select **Cyclistic-Bike-Share-Data-Analysis-RScript.R** to upload it into posit cloud.
 5. Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) under **Files** in Posit Cloud.
 6. Execute the script by clicking on the **Run** button on the top right of the Posit cloud page.
-   **NB:** You can run the code in small batches to avoid errors as we are dealing with a large dataset.
+
+   **NB:** You can consider running the code in small batches to avoid errors as the dataset is large.
 ### Expected Output
 - Summary statistics printed in the console
 - Data visualizations saved in your current working directory.
