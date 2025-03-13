@@ -1,4 +1,5 @@
 # Use tidyverse package for data wrangling
+install.packages("tidyverse")
 library(tidyverse)  #helps wrangle data
 # Use the conflicted package to manage conflicts
 library(conflicted)
