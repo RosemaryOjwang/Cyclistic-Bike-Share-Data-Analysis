@@ -26,7 +26,7 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 ### Installation
 - Clone this repository to your local machine:  
    ```
-   git clone [github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis](https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git)
+   git clone https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git
    ```
   - Navigate to the top level of the directory containing the cloned repository
    
