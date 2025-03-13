@@ -20,19 +20,16 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 
 ## How to Run the Code
 ### Prerequisites
-- Access **RStudio cloud** for sign up & sign up [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
-- Required R packages (see below)
+1. Access **RStudio cloud** for sign up & sign up [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
+2. Click **New Project** to create a new project workspace and open RStudio Cloud console.
 
 ### Installation
-1. Clone this repository to your local machine:  
+- Clone this repository to your local machine:  
    ```
-   git clone https://[github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis](https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git)
+   git clone [github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis](https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git)
    ```
-   Navigate to the top level of the directory containing the cloned repository
-2. Open R or RStudio and install the required packages:
-  ```r  
-  install.packages(c("tidyverse", "ggplot2", "dplyr"))  # Add any other dependencies
-  ```
+  - Navigate to the top level of the directory containing the cloned repository
+   
 ### Running the Script
 Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) in RStudio or run it from the terminal.
 Execute the script using:
