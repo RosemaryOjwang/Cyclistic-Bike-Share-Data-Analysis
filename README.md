@@ -20,7 +20,7 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 
 ## How to Run the Code
 ### Prerequisites
-- Access **RStudio cloud** for sign up & sign up [here]([Download from [CRAN](https://cran.r-project.org/)](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0))  
+- Access **RStudio cloud** for sign up & sign up [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
 - Required R packages (see below)
 
 ### Installation
