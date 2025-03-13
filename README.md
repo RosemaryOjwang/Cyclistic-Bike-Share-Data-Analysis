@@ -1,10 +1,8 @@
 # Cyclistic-Bike-Share-Data-Analysis
 ## Project Overview
 This Cyclistic Bike-Share Analysis examines historical trip data to identify usage patterns between casual riders and annual members, aiming to provide data-driven insights that support a marketing strategy for increasing profitable long-term subscriptions.
-
 ## Dataset
 The dataset for this analysis combines historical bike trip records from Cyclistic’s bike-share program: Divvy 2019 Q1 and Divvy 2020 Q1, totaling 791,956 trips. It details bike rentals, enabling a comparison between annual members and casual riders. Though column names varied slightly, they represented the same concepts. Below are the key columns, categorized as raw data and calculated columns:
-
 ### Raw Data Columns:
 - ride_id (or trip_id): A unique identifier for each bike trip.
 - rideable_type (or bike_type): The type of bike used for the trip (e.g., traditional bike, reclining bike, cargo bike, hand tricycle).
@@ -13,11 +11,9 @@ The dataset for this analysis combines historical bike trip records from Cyclist
 - start_station_name (or from_station_name): The name of the station where the trip started.
 - end_station_name (or to_station_name): The name of the station where the trip ended.
 - member_casual (or user_type): Indicates whether the rider is a casual rider or an annual member.
-
 ### Calculated Columns:
 - ride_length: The total duration of the trip in seconds.
 - day_of_week: The day of the week the trip occurred.
-
 ## How to Run the Code
 1. Clone this repository to your local machine:  
    ```
