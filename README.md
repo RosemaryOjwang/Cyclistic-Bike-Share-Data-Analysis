@@ -28,7 +28,7 @@ The dataset used in this analysis includes historical bike trip records from Cyc
    ```
    git clone https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git
    ```
-  - Navigate to the top level of the directory containing the cloned repository
+- Navigate to the top level of the directory containing the cloned repository
    
 ### Running the Script
 Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) in RStudio or run it from the terminal.
