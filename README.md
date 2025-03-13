@@ -19,16 +19,15 @@ The dataset used in this analysis includes historical bike trip records from Cyc
 - day_of_week: The day of the week the trip occurred.
 
 ## How to Run the Code
-### Prerequisites
-1. Access **RStudio cloud** for sign up & Login [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
-2. Click **New Project**, then **New RStudio Project** to create a new project. You can give your project a name.
-
-### Installation
-- Clone this repository to your local machine:  
+1. Clone this repository to your local machine:  
    ```
    git clone https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git
    ```
-- Navigate to the top level of the directory containing the cloned repository
+2. Access **RStudio cloud** (also called Posit Cloud) for sign up & Login [here](https://login.posit.cloud/register?product=cloud&redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0)  
+3. Click **New Project**, then **New RStudio Project** to create a new project. You can give your project a name.
+4. On the bottom right side of the **Posit Cloud** page, click on **Files** > **Upload** > **Choose File** then navigate to the directory holding the cloned repository: https://github.com/RosemaryOjwang/Cyclistic-Bike-Share-Data-Analysis.git. Select **Cyclistic-Bike-Share-Data-Analysis-RScript.R** to upload it into posit cloud.
+
+
    
 ### Running the Script
 Open the R script (Cyclistic-Bike-Share-Data-Analysis-RScript.R) in RStudio or run it from the terminal.
