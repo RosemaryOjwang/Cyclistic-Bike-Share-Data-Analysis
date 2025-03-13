@@ -32,26 +32,21 @@ The dataset for this analysis combines historical bike trip records from Cyclist
 ### Expected Output
 - Summary statistics printed in the console
 - Data visualizations saved in your current working directory.
-
+- Export a summary file for further exploration.
 ## Analysis Steps
 1. Collect data.
 2. Wrangle data and combine into a single file.
 3. Clean up and add data to prepare for analysis.
 4. Conduct descriptive analysis.
 5. Export summary file for further analysis.
-
 ## Results & Visualizations
 The analysis identified key differences between casual riders and annual members, helping shape data-driven marketing strategies.  
-
 **View the full presentation here:** [Cyclistic Analysis Presentation](https://docs.google.com/presentation/d/1w4xdPxZvyavPg2ct1LWB8wuOGEEZJnSyNn3NWAEboTc/edit?usp=sharing)  
-
 ## Technologies Used
 - Programming Language: R
 - Libraries/ Packages: tidyverse, dplyr, scales and conflicted.
-
 ## License
 [MIT](https://opensource.org/license/mit)
-
 ## Contact/ Author
 - [My GitHub Profile](https://github.com/settings/profile)
 - [My LinkedIn Profile](www.linkedin.com/in/rosemary-ojwang-989b76259)
